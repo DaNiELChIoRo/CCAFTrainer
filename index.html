@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Scenario-based practice quiz for the Claude Certified Architect — Foundations (CCA-F) exam: agentic architecture, tool design & MCP, Claude Code configuration, prompt engineering & structured output, and context management & reliability." />
+  <title>CCA-F Trainer — Claude Certified Architect, Foundations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%9B%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+
+  <!-- Progressive Web App -->
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <meta name="theme-color" content="#cc785c" />
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="CCA-F Trainer" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="app-header__inner">
+      <a class="brand" href="./">
+        <span class="brand__mark">🏛️</span>
+        <span class="brand__name">CCA-F&nbsp;Trainer</span>
+      </a>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme" title="Toggle theme">🌗</button>
+    </div>
+  </header>
+
+  <main id="app" class="app" aria-live="polite">
+    <!-- Views are rendered here by app.js -->
+  </main>
+
+  <footer class="app-footer">
+    <p>
+      Unofficial practice for the <strong>Claude Certified Architect — Foundations</strong> (CCA-F) exam ·
+      References:
+      <a href="https://platform.claude.com/docs" target="_blank" rel="noopener">Claude&nbsp;Docs</a>,
+      <a href="https://code.claude.com/docs" target="_blank" rel="noopener">Claude&nbsp;Code&nbsp;Docs</a>,
+      <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener">MCP</a>
+    </p>
+  </footer>
+
+  <!-- Classic scripts (no bundler) so it works on GitHub Pages and from file:// -->
+  <script src="./assets/js/bibliography.js"></script>
+  <script src="./assets/js/questions.js"></script>
+  <script src="./assets/js/questions2.js"></script>
+  <script src="./assets/js/questions.auto.js"></script>
+  <script src="./assets/js/techniques.js"></script>
+  <script src="./assets/js/app.js"></script>
+
+  <!-- Register the service worker so the app is installable and works offline -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("./sw.js").catch(function () {});
+      });
+    }
+  </script>
+</body>
+</html>
